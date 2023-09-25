@@ -37,6 +37,7 @@ spec:
         value: $(params.branch)
       runAfter:
         - init
+    
     - name: lint
       workspaces:
         - name: source
@@ -50,6 +51,7 @@ spec:
         value: ["--count","--max-complexity=10","--max-line-length=127","--statistics"]
       runAfter:
         - clone
+    
     - name: tests
       workspaces:
         - name: source
@@ -63,6 +65,7 @@ spec:
         value: "-v --with-spec --spec-color"
       runAfter:
         - clone
+    
     - name: build
       workspaces:
         - name: source
@@ -76,6 +79,7 @@ spec:
       runAfter:
         - tests
         - lint
+    
     - name: deploy
       workspaces:
         - name: manifest-dir
@@ -87,7 +91,7 @@ spec:
       - name: SCRIPT
         value: |
           echo "Updating manifest..."
-          sed -i "s|intro-microservices|$(params.build-image)|g" deploy/deployment.yaml
+          sed -i "s|IMAGE_NAME_HERE|$(params.build-image)|g" deploy/deployment.yaml
           cat deploy/deployment.yaml
           echo "Deploying to OpenShift..."
           oc apply -f deploy/
