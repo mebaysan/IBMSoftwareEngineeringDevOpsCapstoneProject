@@ -18,7 +18,7 @@ spec:
         app: accounts
     spec:
       containers:
-      - image: us.icr.io/sn-labs-menesbaysan/accounts:1
+      - image: mebaysan-intro-microservices:latest
         name: accounts
         resources: {}
         env:
