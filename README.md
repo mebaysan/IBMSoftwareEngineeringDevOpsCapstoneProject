@@ -1,4 +1,4 @@
-![Build Status](https://github.com/mebaysan/IBMSoftwareEngineeringDevOpsCapstoneProject/actions/workflows/ci-build.yaml/badge.svg)
+[![CI Build](https://github.com/mebaysan/IBMSoftwareEngineeringDevOpsCapstoneProject/actions/workflows/ci-build.yaml/badge.svg)](https://github.com/mebaysan/IBMSoftwareEngineeringDevOpsCapstoneProject/actions/workflows/ci-build.yaml)
 
 # DevOps Capstone Template
 
