@@ -18,7 +18,7 @@ spec:
         app: accounts
     spec:
       containers:
-      - image: mebaysan-intro-microservices:latest
+      - image: intro-microservices
         name: accounts
         resources: {}
         env:
